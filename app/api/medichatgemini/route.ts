@@ -27,15 +27,17 @@ const model = google('models/gemini-1.5-pro-latest', {
 
 export async function POST(req: Request, res: Response) {
     const reqBody = await req.json();
-    console.log(reqBody);
+    console.log('reqbody: ', reqBody);
 
     const messages: Message[] = reqBody.messages;
     const userQuestion = `${messages[messages.length - 1].content}`;
 
     const reportData: string = reqBody.data.reportData;
     const query = `Represent this for searching relevant passages: patient medical report says: \n${reportData}. \n\n${userQuestion}`;
+    console.log('i coz trouble')
 
     const retrievals = await queryPineconeVectorStore(pinecone, 'index-one', "testspace", query);
+    console.log('i coz trouble also')
 
     const finalPrompt = `Here is a summary of a patient's clinical report, and a user query. Some generic clinical findings are also provided that may or may not be relevant for the report.
   Go through the clinical report and answer the user query.
