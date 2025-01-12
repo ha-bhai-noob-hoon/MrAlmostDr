@@ -1,6 +1,6 @@
 import { Pinecone } from "@pinecone-database/pinecone";
-import { FeatureExtractionPipeline, pipeline } from "@xenova/transformers";
-import { modelname, namespace, topK } from "./app/config";
+//import { FeatureExtractionPipeline, pipeline } from "@xenova/transformers";
+//import { modelname, namespace, topK } from "./app/config";
 import { HfInference } from '@huggingface/inference'
 
 const hf = new HfInference(process.env.HF_TOKEN)
