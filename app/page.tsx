@@ -19,7 +19,7 @@ import { useState } from "react";
 import { useChat } from "ai/react";
 import ReportComponent from "@/components/ReportComponent";
 // import { toast } from "sonner";
-import { useToast } from "@/components/ui/use-toast"
+import { useToast } from "@/hooks/use-toast"
 import ChatComponent from "@/components/chatcomponent";
 
 const Home = () => {

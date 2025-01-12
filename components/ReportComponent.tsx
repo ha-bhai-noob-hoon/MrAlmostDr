@@ -5,7 +5,7 @@ import { Textarea } from './ui/textarea'
 import { Label } from './ui/label'
 import SocialMediaLinks from './social-links'
 // import { toast } from 'sonner'
-import { useToast } from "@/components/ui/use-toast"
+import { useToast } from "@/hooks/use-toast"
 
 type Props = {
     onReportConfirmation: (data: string) => void
